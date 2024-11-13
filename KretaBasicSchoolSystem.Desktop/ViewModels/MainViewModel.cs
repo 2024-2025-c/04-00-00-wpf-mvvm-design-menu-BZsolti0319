@@ -4,6 +4,8 @@ using FontAwesome.Sharp;
 using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
 using KretaBasicSchoolSystem.Desktop.ViewModels.ControlPanel;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens;
+using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses;
+using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects;
 
 namespace KretaBasicSchoolSystem.Desktop.ViewModels
 {
@@ -11,23 +13,27 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
     {
         private ControlPanelViewModel _controlPanelViewModel;
         private SchoolCitizensViewModel _schoolCitizensViewModel;
+        private SchoolClassesViewModel _schoolClassesViewModel;
 
         public MainViewModel()
         {
             _controlPanelViewModel = new ControlPanelViewModel();
             _schoolCitizensViewModel = new SchoolCitizensViewModel();
+            _schoolClassesViewModel = new SchoolClassesViewModel();
         }
 
         public MainViewModel(
-            ControlPanelViewModel controlPanelViewModel,
-            SchoolCitizensViewModel schoolCitizensViewModel 
+            ControlPanelViewModel controlPanelViewModel,  // golf ütő - dependency injection
+            SchoolCitizensViewModel schoolCitizensViewModel,
+            SchoolClassesViewModel schoolClassesViewModel
             )
         {
             _controlPanelViewModel = controlPanelViewModel;
             _schoolCitizensViewModel = schoolCitizensViewModel;
+            _schoolClassesViewModel= schoolClassesViewModel;
 
 
-            CurrentChildView = _controlPanelViewModel;
+            // CurrentChildView = _controlPanelViewModel; // amikor elindul a program legyen kiválasztott menüpont
             ShowDashbord();
         }
 
@@ -39,6 +45,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
 
         [ObservableProperty]
         private BaseViewModel _currentChildView;
+        private BaseViewModel _schoolSubjectsViewModel;
 
         [RelayCommand]
         public void ShowDashbord()
@@ -55,5 +62,22 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             Icon = IconChar.UserGroup;
             CurrentChildView = _schoolCitizensViewModel;
         }
+
+        // SchoolClass menüpont meghívása
+        [RelayCommand]
+        public void ShowSchoolClasses()
+        {
+            Caption = "Osztályok";
+            Icon = IconChar.ChalkboardUser;
+            CurrentChildView = _schoolClassesViewModel;
+        }
+        [RelayCommand]
+        public void ShowSubjectsCitizens()
+        {
+            Caption = "Tantárgyak";
+            Icon = IconChar.UserGroup;
+            CurrentChildView = _schoolSubjectsViewModel;
+        }
+
     }
 }
