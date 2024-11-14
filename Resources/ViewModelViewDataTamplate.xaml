@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controlPanelViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.ControlPanel"
+                    xmlns:controlPanelView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.ControlPanel"
+                    xmlns:schoolCitizensViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens"
+                    xmlns:schoolCitizensView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolCitizens"
+                    xmlns:schoolClassesViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses"
+                    xmlns:schoolClassView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolClasses"
+                    xmlns:schoolSubjectsViewModel="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects"
+                    xmlns:schoolSubjectsView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolSubjects"
+                    >
+    <DataTemplate DataType="{x:Type controlPanelViewModels:ControlPanelViewModel}">
+        <controlPanelView:ControlPanelView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type schoolCitizensViewModels:SchoolCitizensViewModel}">
+        <schoolCitizensView:SchoolCitizensView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type schoolCitizensViewModels:StudentViewModel}">
+        <schoolCitizensView:StudentView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type schoolClassesViewModels:SchoolClassesViewModel}">
+        <schoolClassView:SchoolClassesView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type schoolSubjectsViewModel:SchoolSubjectsViewModel}">
+        <schoolSubjectsView:SchoolSubjectsView/>
+    </DataTemplate>
+</ResourceDictionary>
