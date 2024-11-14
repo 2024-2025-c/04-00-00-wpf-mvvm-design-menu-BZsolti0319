@@ -13,7 +13,7 @@
             <RowDefinition Height="35"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <local:SchoolCitizensMenu Grid.Row="0" Loaded="SchoolCitizensMenu_Loaded"></local:SchoolCitizensMenu>
+        <local:SchoolCitizensMenu Grid.Row="0"></local:SchoolCitizensMenu>
         <ContentControl Grid.Row="1" Content="{Binding CurrentSchoolCitizensChildView }"></ContentControl>
     </Grid>
 </UserControl>

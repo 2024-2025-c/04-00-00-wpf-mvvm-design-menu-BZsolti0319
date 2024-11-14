@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace KretaBasicSchoolSystem.Desktop.Views.SchoolCitizens
+namespace KretaBasicSchoolSystem.Desktop.Views.ControlPanel
 {
     /// <summary>
-    /// Interaction logic for SchoolCitizensView.xaml
+    /// Interaction logic for ControlPanelView.xaml
     /// </summary>
-    public partial class SchoolCitizensView : UserControl
+    public partial class ControlPanelView : UserControl
     {
-        public SchoolCitizensView()
+        public ControlPanelView()
         {
             InitializeComponent();
-        }
-
-        private void SchoolCitizensMenu_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

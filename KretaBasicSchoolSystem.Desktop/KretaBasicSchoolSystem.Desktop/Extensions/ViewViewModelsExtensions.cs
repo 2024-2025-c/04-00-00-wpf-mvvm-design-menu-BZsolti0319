@@ -3,13 +3,11 @@ using KretaBasicSchoolSystem.Desktop.ViewModels.ControlPanel;
 using KretaBasicSchoolSystem.Desktop.ViewModels.Login;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses;
-using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects;
 using KretaBasicSchoolSystem.Desktop.Views;
 using KretaBasicSchoolSystem.Desktop.Views.ControlPanel;
 using KretaBasicSchoolSystem.Desktop.Views.Login;
 using KretaBasicSchoolSystem.Desktop.Views.SchoolCitizens;
 using KretaBasicSchoolSystem.Desktop.Views.SchoolClasses;
-using KretaBasicSchoolSystem.Desktop.Views.SchoolSubjects;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace KretaDesktop.Extensions
@@ -45,43 +43,23 @@ namespace KretaDesktop.Extensions
                 DataContext = s.GetRequiredService<SchoolCitizensViewModel>()
             });
 
-            // School Citizens
             // Students
+            // School Citizens
             services.AddSingleton<StudentViewModel>();
             services.AddSingleton<StudentView>(s => new StudentView()
             {
                 DataContext = s.GetRequiredService<StudentViewModel>()
             });
 
-            // School Citizens
-            // Teachers
-            services.AddSingleton<TeacherViewModel>();
-            services.AddSingleton<TeacherView>(s => new TeacherView()
-            {
-                DataContext = s.GetRequiredService<TeacherViewModel>()
-            });
-
-            // School Citizens
-            // Parents
-            services.AddSingleton<ParentViewModel>();
-            services.AddSingleton<ParentView>(s => new ParentView()
-            {
-                DataContext = s.GetRequiredService<ParentViewModel>()
-            });
-
-            // School Class
+            //SchoolClass
             services.AddSingleton<SchoolClassesViewModel>();
-            services.AddSingleton<SchoolClassesView>(s => new SchoolClassesView()
+            services.AddSingleton<SchoolClassesView>(s => new SchoolClassesView
             {
-                DataContext = s.GetRequiredService<SchoolClassesViewModel>()
-            });
+                    DataContext = s.GetRequiredService<SchoolClassesViewModel>()
+                }                
+            );
 
-            // Subjects
-            services.AddSingleton<SchoolSubjectsViewModel>();
-            services.AddSingleton<SchoolSubjectsView>(s => new SchoolSubjectsView()
-            {
-                DataContext = s.GetRequiredService<SchoolSubjectsViewModel>()
-            });
+
 
         }
     }
