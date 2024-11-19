@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace KretaBasicSchoolSystem.Desktop.Views
+namespace KretaBasicSchoolSystem.Desktop.Views.SchoolGrades
 {
     /// <summary>
-    /// Interaction logic for Header.xaml
+    /// Interaction logic for SchoolGradesView.xaml
     /// </summary>
-    public partial class Header : UserControl
+    public partial class SchoolGradesView : UserControl
     {
-        public Header()
+        public SchoolGradesView()
         {
             InitializeComponent();
         }

@@ -76,6 +76,16 @@
                             <TextBlock Text="Tantárgyak" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
+                    <RadioButton 
+				        Style="{StaticResource menuButton}"
+                        Tag="{StaticResource colorMidleGreen}"
+				        Command="{Binding ShowSchoolGradesCommand}"
+ >
+                        <StackPanel Orientation="Horizontal">
+                            <fa:IconImage Icon="SackDollar" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Osztályzatok" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </RadioButton>
                 </StackPanel>
             </StackPanel>
         </Border>
