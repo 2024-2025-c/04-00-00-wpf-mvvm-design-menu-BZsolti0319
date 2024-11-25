@@ -4,11 +4,11 @@
                     xmlns:controlPanelView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.ControlPanel"
                     xmlns:schoolCitizensViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens"
                     xmlns:schoolCitizensView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolCitizens"
-					xmlns:schoolClassesViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses"
-					xmlns:schoolClassesView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolClasses"
-                    xmlns:schoolSubjectsViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects"
+                    xmlns:schoolClassesViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses"
+                    xmlns:schoolClassView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolClasses"
+                    xmlns:schoolSubjectsViewModel="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects"
                     xmlns:schoolSubjectsView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolSubjects"
-                    xmlns:schoolGradesViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolGrades"
+                    xmlns:schoolGradesViewModel="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolGrades"
                     xmlns:schoolGradesView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolGrades"
                     >
     <DataTemplate DataType="{x:Type controlPanelViewModels:ControlPanelViewModel}">
@@ -20,19 +20,32 @@
     <DataTemplate DataType="{x:Type schoolCitizensViewModels:StudentViewModel}">
         <schoolCitizensView:StudentView/>
     </DataTemplate>
-    <DataTemplate DataType="{x:Type schoolCitizensViewModels:TeacherViewModel}">
-        <schoolCitizensView:TeacherView/>
-    </DataTemplate>
     <DataTemplate DataType="{x:Type schoolCitizensViewModels:ParentViewModel}">
         <schoolCitizensView:ParentView/>
     </DataTemplate>
-    <DataTemplate DataType="{x:Type schoolClassesViewModels:SchoolClassesViewModel}">
-        <schoolClassesView:SchoolClassesView/>
+    <DataTemplate DataType="{x:Type schoolCitizensViewModels:TeacherViewModel}">
+        <schoolCitizensView:TeacherView/>
     </DataTemplate>
-    <DataTemplate DataType="{x:Type schoolSubjectsViewModels:SchoolSubjectsViewModel}">
+    <DataTemplate DataType="{x:Type schoolClassesViewModels:SchoolClassesViewModel}">
+        <schoolClassView:SchoolClassesView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type schoolGradesViewModel:SchoolGradesViewModel}">
+        <schoolGradesView:GradesView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type schoolGradesViewModel:CurrentLessonViewModel}">
+        <schoolGradesView:CurrentLesson/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type schoolGradesViewModel:EYearViewModel}">
+        <schoolGradesView:EYearView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type schoolGradesViewModel:HYearViewModel}">
+        <schoolGradesView:HYearView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type schoolGradesViewModel:TClassesViewModel}">
+        <schoolGradesView:TClassesView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type schoolSubjectsViewModel:SchoolSubjectsViewModel}">
         <schoolSubjectsView:SchoolSubjectsView/>
     </DataTemplate>
-    <DataTemplate DataType="{x:Type schoolGradesViewModels:SchoolGradesViewModel}">
-        <schoolGradesView:SchoolGradesView/>
-    </DataTemplate>
+    
 </ResourceDictionary>

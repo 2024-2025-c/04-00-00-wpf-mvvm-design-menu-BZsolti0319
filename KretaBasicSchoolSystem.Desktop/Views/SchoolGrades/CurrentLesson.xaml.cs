@@ -13,11 +13,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace KretaBasicSchoolSystem.Desktop.Views.SchoolCitizens;
+namespace KretaBasicSchoolSystem.Desktop.Views.SchoolGrades;
 
-public partial class ParentView : UserControl
+public partial class CurrentLesson : UserControl
 {
-    public ParentView()
+    public CurrentLesson()
     {
         InitializeComponent();
     }

@@ -4,5 +4,6 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses
 {
     public class SchoolClassesViewModel : BaseViewModel
     {
+        
     }
 }

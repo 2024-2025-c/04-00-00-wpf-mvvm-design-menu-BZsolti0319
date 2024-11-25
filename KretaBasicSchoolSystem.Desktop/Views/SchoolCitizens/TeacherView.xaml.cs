@@ -13,16 +13,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace KretaBasicSchoolSystem.Desktop.Views.SchoolCitizens
+namespace KretaBasicSchoolSystem.Desktop.Views.SchoolCitizens;
+
+public partial class TeacherView : UserControl
 {
-    /// <summary>
-    /// Interaction logic for TeacherView.xaml
-    /// </summary>
-    public partial class TeacherView : UserControl
+    public TeacherView()
     {
-        public TeacherView()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

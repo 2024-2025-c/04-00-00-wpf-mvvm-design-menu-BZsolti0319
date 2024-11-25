@@ -10,11 +10,11 @@ using KretaBasicSchoolSystem.Desktop.Views.ControlPanel;
 using KretaBasicSchoolSystem.Desktop.Views.Login;
 using KretaBasicSchoolSystem.Desktop.Views.SchoolCitizens;
 using KretaBasicSchoolSystem.Desktop.Views.SchoolClasses;
-using KretaBasicSchoolSystem.Desktop.Views.SchoolSubjects;
 using KretaBasicSchoolSystem.Desktop.Views.SchoolGrades;
+using KretaBasicSchoolSystem.Desktop.Views.SchoolSubjects;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace KretaDesktop.Extensions
+namespace KretaBasicSchoolSystem.Desktop.Extensions
 {
     public static class ViewViewModelsExtensions
     {
@@ -47,50 +47,61 @@ namespace KretaDesktop.Extensions
                 DataContext = s.GetRequiredService<SchoolCitizensViewModel>()
             });
 
-            // School Citizens
             // Students
+            // School Citizens
             services.AddSingleton<StudentViewModel>();
             services.AddSingleton<StudentView>(s => new StudentView()
             {
                 DataContext = s.GetRequiredService<StudentViewModel>()
             });
-
-            // School Citizens
-            // Teachers
-            services.AddSingleton<TeacherViewModel>();
-            services.AddSingleton<TeacherView>(s => new TeacherView()
-            {
-                DataContext = s.GetRequiredService<TeacherViewModel>()
-            });
-
-            // School Citizens
-            // Parents
             services.AddSingleton<ParentViewModel>();
             services.AddSingleton<ParentView>(s => new ParentView()
             {
                 DataContext = s.GetRequiredService<ParentViewModel>()
             });
-
-            // School Class
+            services.AddSingleton<TeacherViewModel>();
+            services.AddSingleton<TeacherView>(s => new TeacherView()
+            {
+                DataContext = s.GetRequiredService<TeacherViewModel>()
+            });
+            //SchoolClass
             services.AddSingleton<SchoolClassesViewModel>();
             services.AddSingleton<SchoolClassesView>(s => new SchoolClassesView()
             {
                 DataContext = s.GetRequiredService<SchoolClassesViewModel>()
             });
-
-            // Subjects
+            //tantárgyak? maybe idfk
             services.AddSingleton<SchoolSubjectsViewModel>();
             services.AddSingleton<SchoolSubjectsView>(s => new SchoolSubjectsView()
             {
                 DataContext = s.GetRequiredService<SchoolSubjectsViewModel>()
             });
-
+            //Osztályzatok
             services.AddSingleton<SchoolGradesViewModel>();
-            services.AddSingleton<SchoolGradesView>(s => new SchoolGradesView()
+            services.AddSingleton<GradesView>(s => new GradesView()
             {
                 DataContext = s.GetRequiredService<SchoolGradesViewModel>()
             });
-
+            services.AddSingleton<CurrentLessonViewModel>();
+            services.AddSingleton<CurrentLesson>(s => new CurrentLesson()
+            {
+                DataContext = s.GetRequiredService<CurrentLessonViewModel>()
+            });
+            services.AddSingleton<TClassesViewModel>();
+            services.AddSingleton<TClassesView>(s => new TClassesView()
+            {
+                DataContext = s.GetRequiredService<TClassesViewModel>()
+            });
+            services.AddSingleton<HYearViewModel>();
+            services.AddSingleton<HYearView>(s => new HYearView()
+            {
+                DataContext = s.GetRequiredService<HYearViewModel>()
+            });
+            services.AddSingleton<EYearViewModel>();
+            services.AddSingleton<EYearView>(s => new EYearView()
+            {
+                DataContext = s.GetRequiredService<EYearViewModel>()
+            });
 
         }
     }

@@ -1,10 +1,10 @@
 ﻿using KretaBasicSchoolSystem.Desktop.Views;
 using KretaBasicSchoolSystem.Desktop.Views.Login;
-using KretaDesktop.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Windows;
+using KretaBasicSchoolSystem.Desktop.Extensions;
 
 namespace KretaBasicSchoolSystem.Desktop
 {
